@@ -1,0 +1,85 @@
+.cardContainer {
+  width: 12.125rem;
+  height: 19rem;
+
+  margin: 1rem;
+
+  padding: 2.4rem 1rem;
+
+  position: relative;
+
+  border-radius: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+
+  cursor: pointer;
+  transition: 0.6s;
+}
+.cardContainer:hover {
+  background: #ffffff;
+  box-shadow: 0px 14px 30px #e2e2e2;
+  transform: translateY(-5%);
+}
+.cardContainer div img {
+  width: 133px;
+  height: 112px;
+}
+.cardContainer div {
+  display: flex;
+}
+
+.cardMain {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.cardPrice {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardPrice span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+
+  color: #bdbdbd;
+}
+.cardPrice p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #000000;
+}
+.cardFooter {
+  margin-top: 12px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardHeader div {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  color: #d0d0d0;
+}
