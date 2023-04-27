@@ -52,7 +52,6 @@ export const Slider = () => {
             position = "lastSlide";
           }
 
-          console.log(position);
           return (
             <article className={`${position} sliderArticle`}>
               <img src={item} alt="" />
