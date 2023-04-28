@@ -8,9 +8,3 @@ body {
   background-color: #e7f6ff;
   font-family: inter;
 }
-.App {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  background-color: #e7f6ff;
-}

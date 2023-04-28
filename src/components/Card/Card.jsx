@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 import {
   AiOutlinePlusSquare,
@@ -8,12 +10,30 @@ import {
 
 import "./Card.css";
 
-export const Card = ({ id, title, image, price }) => {
+export const Card = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const { id, title, image, price } = item;
+  const [isLiked, setIsliked] = useState(false);
+
+  function setFavorite() {
+    dispatch({ type: "ADD_TO_FAVORITES", payload: item });
+
+    setIsliked((value) => !value);
+  }
+
   return (
     <div className="cardContainer">
       <div className="cardHeader">
-        <div className="">
-          <AiOutlineHeart className="emptyHeart" size={24} />
+        <div
+          className={!isLiked ? "" : "likedCard"}
+          onClick={() => setFavorite()}
+        >
+          {!isLiked ? (
+            <AiOutlineHeart size={24} />
+          ) : (
+            <AiFillHeart className="fullHeart" size={24} />
+          )}
         </div>
         <img src={image} alt="" />
       </div>

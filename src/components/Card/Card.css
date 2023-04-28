@@ -1,22 +1,14 @@
 .cardContainer {
   width: 12.125rem;
   height: 19rem;
-
-  margin: 1rem;
-
   padding: 2.4rem 1rem;
-
   position: relative;
-
   border-radius: 2.5rem;
-
   display: flex;
   align-items: center;
   flex-direction: column;
-
   background: #ffffff;
   border: 1px solid #e4e4e4;
-
   cursor: pointer;
   transition: 0.6s;
 }
@@ -32,17 +24,14 @@
 .cardContainer div {
   display: flex;
 }
-
 .cardMain {
   margin-top: 10px;
   font-size: 18px;
 }
-
 .cardPrice {
   display: flex;
   flex-direction: column;
 }
-
 .cardPrice span {
   font-family: "Inter";
   font-style: normal;
@@ -50,7 +39,6 @@
   font-size: 11px;
   line-height: 13px;
   text-transform: uppercase;
-
   color: #bdbdbd;
 }
 .cardPrice p {
@@ -59,7 +47,6 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-
   color: #000000;
 }
 .cardFooter {
@@ -69,7 +56,6 @@
   display: flex;
   justify-content: space-between;
 }
-
 .cardHeader div {
   position: absolute;
   top: 25px;
@@ -82,4 +68,10 @@
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   color: #d0d0d0;
+  transition: 0.3s;
+}
+.cardHeader div.likedCard {
+  color: #ff8585;
+  background-color: #fef0f0;
+  border: none;
 }

@@ -1,18 +1,9 @@
 import "./App.css";
-import { Wrapper } from "./components/Wrapper";
-import { Header } from "./components/Header";
-import { Cards } from "./components/Cards/";
-import { Card } from "./components/Card";
-import { Slider } from "./components/Slider";
+import { Home } from "./pages/home/Home";
 function App() {
   return (
     <div className="App">
-      <Wrapper>
-        <Header />
-        <Slider />
-        
-        <Cards />
-      </Wrapper>
+      <Home />
     </div>
   );
 }
