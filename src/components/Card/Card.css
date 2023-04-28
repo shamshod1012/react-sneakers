@@ -75,3 +75,19 @@
   background-color: #fef0f0;
   border: none;
 }
+.orderIcon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #c4c4c4;
+  transition: 0.5s;
+}
+.orderedIcon {
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #89f09c 0%, #3cc755 100%);
+}
