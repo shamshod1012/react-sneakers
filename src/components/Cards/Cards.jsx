@@ -1,9 +1,8 @@
 import React from "react";
-import { allSneakers } from "../../data";
 import { Card } from "../Card/Card";
 
 import "./Cards.css";
-export const Cards = () => {
+export const Cards = ({ items }) => {
   return (
     <div className="sneakersContainer">
       <div className="sneakersHeader">
@@ -13,8 +12,8 @@ export const Cards = () => {
       </div>
 
       <div className="sneakersMain">
-        {allSneakers.map((sneakers) => {
-          return <Card {...sneakers} />;
+        {items.map((sneakers) => {
+          return <Card key={sneakers.id} item={sneakers} />;
         })}
       </div>
     </div>
