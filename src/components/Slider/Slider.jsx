@@ -53,7 +53,7 @@ export const Slider = () => {
           }
 
           return (
-            <article className={`${position} sliderArticle`}>
+            <article key={i} className={`${position} sliderArticle`}>
               <img src={item} alt="" />
             </article>
           );

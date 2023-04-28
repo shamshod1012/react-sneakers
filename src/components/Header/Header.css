@@ -39,6 +39,7 @@
   font-family: inter;
   font-weight: 600;
   color: #5c5c5c;
+  cursor: pointer;
 }
 .headerRight div {
   margin-right: 0.625rem;

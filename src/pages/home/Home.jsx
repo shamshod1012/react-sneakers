@@ -5,7 +5,9 @@ import { sneakers } from "../../data";
 import "./Home.css";
 export const Home = () => {
   const state = useSelector((state) => state);
-  console.log(state);
+  console.log(state.favorites);
+  console.log(state.orders);
+
   return (
     <div className="Home">
       <Wrapper>

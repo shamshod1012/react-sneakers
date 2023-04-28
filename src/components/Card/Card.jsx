@@ -7,6 +7,9 @@ import {
   AiOutlineHeart,
   AiFillHeart,
 } from "react-icons/ai";
+import { BsCheckLg } from "react-icons/bs";
+
+import { BiPlus } from "react-icons/bi";
 
 import "./Card.css";
 
@@ -15,13 +18,25 @@ export const Card = ({ item }) => {
 
   const { id, title, image, price } = item;
   const [isLiked, setIsliked] = useState(false);
+  const [isOrder, setIsOrder] = useState(false);
 
   function setFavorite() {
-    dispatch({ type: "ADD_TO_FAVORITES", payload: item });
-
     setIsliked((value) => !value);
+    if (isLiked) {
+      dispatch({ type: "REMOVE_FROM_FAVORITES", payload: item });
+    } else {
+      dispatch({ type: "ADD_TO_FAVORITES", payload: item });
+    }
   }
+  function setOrder() {
+    setIsOrder((order) => !order);
 
+    if (isOrder) {
+      dispatch({ type: "REMOVE_FROM_ORDERS", payload: item });
+    } else {
+      dispatch({ type: "ADD_TO_ORDERS", payload: item });
+    }
+  }
   return (
     <div className="cardContainer">
       <div className="cardHeader">
@@ -45,7 +60,13 @@ export const Card = ({ item }) => {
           <span>Цена:</span>
           <p>{price} руб</p>
         </div>
-        <AiOutlinePlusSquare className="plusIcon" size={30} />
+
+        <div
+          className={isOrder ? "orderIcon orderedIcon" : "orderIcon"}
+          onClick={setOrder}
+        >
+          {isOrder ? <BsCheckLg size={25} /> : <BiPlus size={25} />}
+        </div>
       </div>
     </div>
   );
