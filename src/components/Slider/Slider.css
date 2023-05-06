@@ -34,6 +34,9 @@
   z-index: 1;
   box-shadow: 0 0 5px #c0c0c0;
 }
+.icon:active {
+  transform: scale(0.9);
+}
 .i1 {
   left: 30px;
 }

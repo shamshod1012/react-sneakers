@@ -13,7 +13,6 @@ function removeFromFavorites(state, item) {
   return { ...state, favorites: newFavorites };
 }
 
-
 function addToOrders(state, item) {
   return { ...state, orders: [...state.orders, item] };
 }
