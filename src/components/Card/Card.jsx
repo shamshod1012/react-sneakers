@@ -2,11 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import {
-  AiOutlinePlusSquare,
-  AiOutlineHeart,
-  AiFillHeart,
-} from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
 
 import { BiPlus } from "react-icons/bi";
