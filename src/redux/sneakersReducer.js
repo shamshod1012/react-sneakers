@@ -1,5 +1,6 @@
 const initialState = {
   isLoading: false,
+  allSneakers: [],
   favorites: [],
   orders: [],
 };
@@ -20,6 +21,12 @@ function removeFromOrders(state, item) {
   const newOrders = state.orders.filter((element) => item !== element);
   return { ...state, orders: newOrders };
 }
+function saveAllSneakers(state, array = []) {
+  return { ...state, allSneakers: array };
+}
+function saveFavorites(state, array = []) {
+  return { ...state, favorites: array };
+}
 export const sneakesReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TO_FAVORITES":
@@ -30,6 +37,10 @@ export const sneakesReducer = (state = initialState, action) => {
       return addToOrders(state, action.payload);
     case "REMOVE_FROM_ORDERS":
       return removeFromOrders(state, action.payload);
+    case "SAVE_ALL_SNEAKERS":
+      return saveAllSneakers(state, action.payload);
+    case "SAVE_FAVORITES_S":
+      return saveFavorites(state, action.payload);
     default:
       return state;
   }

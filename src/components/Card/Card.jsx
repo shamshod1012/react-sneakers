@@ -1,35 +1,48 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
-
 import { BiPlus } from "react-icons/bi";
-
+import { fetchSingleItems, remoteItems } from "../../redux/thunk";
 import "./Card.css";
+import { useSelector } from "react-redux";
 
-export const Card = ({ item }) => {
+export const Card = ({ item, changeFavorites }) => {
+  const { favorites } = useSelector((state) => state);
+  const { id, title, image, price, isFavorite } = item;
   const dispatch = useDispatch();
 
-  const { id, title, image, price } = item;
-  const [isLiked, setIsliked] = useState(false);
+  // const isFavorite = favorites.some((favorite) => {
+  //   console.log(favorite.id);
+  //   console.log(id);
+
+  //   return favorite.id === id;
+  // });
+
+  const [isLiked, setIsLiked] = useState(isFavorite);
   const [isOrder, setIsOrder] = useState(false);
 
-  function setFavorite() {
-    setIsliked((value) => !value);
+  function handleFavoriteClick() {
+    setIsLiked((liked) => !liked);
     if (isLiked) {
+      changeFavorites(item);
+
       dispatch({ type: "REMOVE_FROM_FAVORITES", payload: item });
+      dispatch(remoteItems("http://localhost:8000/favorites", item.id));
     } else {
-      dispatch({ type: "ADD_TO_FAVORITES", payload: item });
+      changeFavorites(item);
     }
   }
-  function setOrder() {
-    setIsOrder((order) => !order);
 
+  function handleOrderClick() {
+    setIsOrder((ordered) => !ordered);
     if (isOrder) {
+      dispatch(remoteItems("http://localhost:8000/orders", item.id));
+
       dispatch({ type: "REMOVE_FROM_ORDERS", payload: item });
     } else {
+      dispatch(fetchSingleItems("http://localhost:8000/orders", item));
+
       dispatch({ type: "ADD_TO_ORDERS", payload: item });
     }
   }
@@ -38,7 +51,7 @@ export const Card = ({ item }) => {
       <div className="cardHeader">
         <div
           className={!isLiked ? "" : "likedCard"}
-          onClick={() => setFavorite()}
+          onClick={handleFavoriteClick}
         >
           {!isLiked ? (
             <AiOutlineHeart size={24} />
@@ -59,7 +72,7 @@ export const Card = ({ item }) => {
 
         <div
           className={isOrder ? "orderIcon orderedIcon" : "orderIcon"}
-          onClick={setOrder}
+          onClick={handleOrderClick}
         >
           {isOrder ? <BsCheckLg size={25} /> : <BiPlus size={25} />}
         </div>
