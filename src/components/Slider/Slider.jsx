@@ -74,10 +74,3 @@ export const Slider = () => {
     </div>
   );
 };
-
-/**
- * https://imageio.forbes.com/blogs-images/josephdeacetis/files/2018/10/180519_AB-KOIO2869_focus.jpg?format=jpg&width=960
- * https://e0.pxfuel.com/wallpapers/940/270/desktop-wallpaper-blue-sneakers-ultra-wide-tv-net-sneaker.jpg
- * https://images.wallpaperscraft.com/image/single/sneakers_shoes_texture_168868_2560x1024.jpg
- * https://images.wallpaperscraft.com/image/single/sneakers_shoes_legs_115414_2560x1024.jpg
- */
