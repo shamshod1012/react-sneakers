@@ -9,6 +9,8 @@ import { useDispatch } from "react-redux";
 import { fetchItems } from "./redux/thunk";
 
 import { useSelector } from "react-redux";
+
+import { ErrorPage } from "./pages/error page";
 import { Orders } from "./pages/orders";
 const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/orders",
     element: <Orders />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 
