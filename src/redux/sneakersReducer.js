@@ -1,8 +1,5 @@
 const initialState = {
-  isLoading: false,
   allSneakers: [],
-  favorites: [],
-  orders: [],
 };
 
 function addToFavorite(state, item) {

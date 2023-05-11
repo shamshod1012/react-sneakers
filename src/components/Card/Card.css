@@ -72,8 +72,8 @@
 }
 .cardHeader div.likedCard {
   color: #ff8585;
-  background-color: #fef0f0;
   border: none;
+  background: linear-gradient(180deg, #fef0f0 0%, #ffcdcd 100%);
 }
 .orderIcon {
   width: 40px;

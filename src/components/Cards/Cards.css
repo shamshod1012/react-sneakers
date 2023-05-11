@@ -1,4 +1,5 @@
 .sneakersContainer {
+  margin-top: 2rem;
   padding: 0 2.6rem;
 }
 .sneakersHeader {
@@ -28,4 +29,5 @@
   flex-wrap: wrap;
   column-gap: 2.7rem;
   row-gap: 1.5rem;
+  margin-bottom: 32px;
 }

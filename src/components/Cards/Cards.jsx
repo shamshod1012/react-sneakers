@@ -3,25 +3,31 @@ import { Card } from "../Card/Card";
 import { useSelector } from "react-redux";
 
 import "./Cards.css";
-import { fetchSingleItems, remoteItems } from "../../redux/thunk";
+import {
+  // fetchSingleItems,
+  remoteItems,
+  changeFavorites,
+} from "../../redux/thunk";
 
-import { changeFavotie } from "../../redux/thunk";
 import { useDispatch } from "react-redux";
+
+import { changeFavorites2 } from "../../redux/thunk";
+
 export const Cards = ({ items }) => {
   const dispatch = useDispatch();
   const { favorites } = useSelector((state) => state);
 
-  function changeFavorites(item) {
-    dispatch(changeFavotie(" http://localhost:8000/allSneakers", item));
+  const changeFavoritesTest = (item, set, state) => {
+    if (state) {
+      dispatch(changeFavorites2("http://localhost:8000/allSneakers", item));
+      dispatch(remoteItems("http://localhost:8000/favorites", item.id));
+    } else {
+      dispatch(changeFavorites("http://localhost:8000/allSneakers", item));
+      // dispatch(fetchSingleItems("http://localhost:8000/favorites", item));
+    }
+    set((value) => !value);
+  };
 
-    dispatch(
-      fetchSingleItems(
-        "http://localhost:8000/allSneakers",
-        "http://localhost:8000/favorites",
-        item
-      )
-    );
-  }
   return (
     <div className="sneakersContainer">
       <div className="sneakersHeader">
@@ -35,7 +41,7 @@ export const Cards = ({ items }) => {
           return (
             <Card
               key={sneakers.id}
-              changeFavorites={changeFavorites}
+              changeFavoritesTest={changeFavoritesTest}
               item={sneakers}
             />
           );

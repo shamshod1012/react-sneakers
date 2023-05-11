@@ -3,47 +3,35 @@ import { useDispatch } from "react-redux";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
 import { BiPlus } from "react-icons/bi";
-import { fetchSingleItems, remoteItems } from "../../redux/thunk";
-import "./Card.css";
-import { useSelector } from "react-redux";
 
-export const Card = ({ item, changeFavorites }) => {
-  const { favorites } = useSelector((state) => state);
-  const { id, title, image, price, isFavorite } = item;
+import "./Card.css";
+import { changeFavorites, changeFavorites2 } from "../../redux/thunk";
+import { changeOrder, changeOrder2 } from "../../redux/thunk";
+
+export const Card = ({ item, changeFavoritesTest }) => {
+  const { id, title, image, price, isFavorite, isOrdered } = item;
   const dispatch = useDispatch();
 
-  // const isFavorite = favorites.some((favorite) => {
-  //   console.log(favorite.id);
-  //   console.log(id);
-
-  //   return favorite.id === id;
-  // });
-
   const [isLiked, setIsLiked] = useState(isFavorite);
-  const [isOrder, setIsOrder] = useState(false);
+  const [isOrder, setIsOrder] = useState(isOrdered);
 
   function handleFavoriteClick() {
-    setIsLiked((liked) => !liked);
     if (isLiked) {
-      changeFavorites(item);
-
-      dispatch({ type: "REMOVE_FROM_FAVORITES", payload: item });
-      dispatch(remoteItems("http://localhost:8000/favorites", item.id));
+      dispatch(changeFavorites2("http://localhost:8000/allSneakers", item));
+      setIsLiked(false);
     } else {
-      changeFavorites(item);
+      dispatch(changeFavorites("http://localhost:8000/allSneakers", item));
+      setIsLiked(true);
     }
   }
 
   function handleOrderClick() {
-    setIsOrder((ordered) => !ordered);
     if (isOrder) {
-      dispatch(remoteItems("http://localhost:8000/orders", item.id));
-
-      dispatch({ type: "REMOVE_FROM_ORDERS", payload: item });
+      dispatch(changeOrder2("http://localhost:8000/allSneakers", item));
+      setIsOrder(false);
     } else {
-      dispatch(fetchSingleItems("http://localhost:8000/orders", item));
-
-      dispatch({ type: "ADD_TO_ORDERS", payload: item });
+      dispatch(changeOrder("http://localhost:8000/allSneakers", item));
+      setIsOrder(true);
     }
   }
   return (
@@ -51,7 +39,9 @@ export const Card = ({ item, changeFavorites }) => {
       <div className="cardHeader">
         <div
           className={!isLiked ? "" : "likedCard"}
-          onClick={handleFavoriteClick}
+          onClick={() => {
+            handleFavoriteClick();
+          }}
         >
           {!isLiked ? (
             <AiOutlineHeart size={24} />

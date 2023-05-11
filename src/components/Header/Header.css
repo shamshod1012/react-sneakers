@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  text-decoration: none;
+
   padding: 0;
 }
 
@@ -14,6 +16,7 @@
 }
 .headerLeft {
   display: flex;
+  cursor: pointer;
 }
 .headerLeft img {
   width: 40px;
@@ -24,6 +27,7 @@
 .headerLeft div p {
   font-family: inter;
   font-weight: 700;
+  color: #000;
   font-size: 1.25rem;
 }
 .headerLeft div span {
@@ -39,7 +43,7 @@
   font-family: inter;
   font-weight: 600;
   color: #5c5c5c;
-  cursor: pointer;
+  color: #5c5c5c;
 }
 .headerRight div {
   margin-right: 0.625rem;
@@ -48,15 +52,20 @@
 }
 .cart {
   margin-right: 0.25rem;
+
   color: #9b9b9b;
+  color: #5c5c5c;
   font-size: 1.5rem;
 }
 .fullLike {
   margin: 0 6px;
+
   font-size: 1.5rem;
+  color: #5c5c5c;
 }
 .profileImg {
   margin: 0 6px;
 
+  color: #5c5c5c;
   font-size: 1.5rem;
 }
