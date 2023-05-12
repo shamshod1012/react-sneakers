@@ -8,3 +8,14 @@ body {
   background-color: #e7f6ff;
   font-family: inter;
 }
+.emptyFavorites {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  flex-direction: column;
+}
+.emptyFavorites p {
+  font-size: 30px;
+}

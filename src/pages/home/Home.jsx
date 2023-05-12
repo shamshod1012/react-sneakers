@@ -7,14 +7,13 @@ import "./Home.css";
 export const Home = () => {
   const state = useSelector((state) => state);
   const { allSneakers } = state;
-  console.log(allSneakers);
   return (
     <div className="Home">
       <Wrapper>
         <Header />
         <Slider />
 
-        <Cards items={allSneakers} />
+        <Cards items={allSneakers} title={"Barcha Oyoq Kiyimlar"} />
       </Wrapper>
     </div>
   );

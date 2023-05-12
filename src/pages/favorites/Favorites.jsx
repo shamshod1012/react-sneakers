@@ -19,7 +19,15 @@ export const Favorites = () => {
   return (
     <Wrapper>
       <Header />
-      <Cards items={data} />
+
+      {data.length ? (
+        <Cards items={data} title={"Sevimli Oyoq Kiyimlar"} />
+      ) : (
+        <div className={"emptyFavorites"}>
+          <p>😞</p>
+          <p>Hech Qanday Sevimlilar Yo'q</p>
+        </div>
+      )}
     </Wrapper>
   );
 };

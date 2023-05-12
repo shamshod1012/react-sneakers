@@ -19,7 +19,14 @@ export const Orders = () => {
   return (
     <Wrapper>
       <Header />
-      <Cards items={data} />
+      {data.length ? (
+        <Cards items={data} title={"Sevimli Oyoq Kiyimlar"} />
+      ) : (
+        <div className={"emptyFavorites"}>
+          <p>😞</p>
+          <p>Hech Qanday Buyurtmalar Yo'q</p>
+        </div>
+      )}
     </Wrapper>
   );
 };
