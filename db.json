@@ -6,7 +6,7 @@
       "price": 32000,
       "image": "/assets/images/s1.svg",
       "isFavorite": false,
-      "isOrdered": true
+      "isOrdered": false
     },
     {
       "id": 2,

@@ -6,8 +6,6 @@ import { BsCart2 } from "react-icons/bs";
 import { BiHeart, BiUserCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 export const Header = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="headerContainer">
       <Link to={"/"}>

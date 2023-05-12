@@ -3,18 +3,26 @@ import { useDispatch } from "react-redux";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
 import { BiPlus } from "react-icons/bi";
-
+import { useEffect } from "react";
 import "./Card.css";
-import { changeFavorites, changeFavorites2 } from "../../redux/thunk";
+import {
+  changeFavorites,
+  changeFavorites2,
+  fetchItems,
+} from "../../redux/thunk";
 import { changeOrder, changeOrder2 } from "../../redux/thunk";
 
 export const Card = ({ item, changeFavoritesTest }) => {
   const { id, title, image, price, isFavorite, isOrdered } = item;
-  const dispatch = useDispatch();
 
   const [isLiked, setIsLiked] = useState(isFavorite);
   const [isOrder, setIsOrder] = useState(isOrdered);
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(
+      fetchItems("http://localhost:8000/allSneakers", "SAVE_ALL_SNEAKERS")
+    );
+  }, [isLiked, isOrder]);
   function handleFavoriteClick() {
     if (isLiked) {
       dispatch(changeFavorites2("http://localhost:8000/allSneakers", item));
@@ -39,9 +47,7 @@ export const Card = ({ item, changeFavoritesTest }) => {
       <div className="cardHeader">
         <div
           className={!isLiked ? "" : "likedCard"}
-          onClick={() => {
-            handleFavoriteClick();
-          }}
+          onClick={handleFavoriteClick}
         >
           {!isLiked ? (
             <AiOutlineHeart size={24} />

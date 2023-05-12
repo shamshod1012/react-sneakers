@@ -30,16 +30,16 @@ const router = createBrowserRouter([
     element: <ErrorPage />,
   },
 ]);
-
 function App() {
-  const { allSneakers } = useSelector((state) => state);
+  const state = useSelector((state) => state);
+  const { allSneakers } = state;
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(
       fetchItems("http://localhost:8000/allSneakers", "SAVE_ALL_SNEAKERS")
     );
-  }, [allSneakers]);
+  }, []);
 
   return <RouterProvider router={router} />;
 }
