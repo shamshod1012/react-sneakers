@@ -3,4 +3,8 @@
   min-height: 100vh;
   align-items: center;
   background-color: #e7f6ff;
+  position: relative;
+}
+.hiddenHome {
+  overflow: hidden;
 }

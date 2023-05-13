@@ -13,6 +13,9 @@ import {
 import { changeOrder, changeOrder2 } from "../../redux/thunk";
 
 export const Card = ({ item, changeFavoritesTest }) => {
+
+  
+
   const { id, title, image, price, isFavorite, isOrdered } = item;
 
   const [isLiked, setIsLiked] = useState(isFavorite);

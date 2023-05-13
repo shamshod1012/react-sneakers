@@ -4,6 +4,7 @@ import { Header, Wrapper, Cards } from "../../components";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useState } from "react";
+import { OverlayCard } from "../../components/overLayCard";
 
 export const Orders = () => {
   const [data, setData] = useState([]);
@@ -27,6 +28,7 @@ export const Orders = () => {
           <p>Hech Qanday Buyurtmalar Yo'q</p>
         </div>
       )}
+      <OverlayCard />
     </Wrapper>
   );
 };
