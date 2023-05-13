@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-
+import { useDispatch } from "react-redux";
 import { BsCart2 } from "react-icons/bs";
+import { useSelector } from "react-redux";
 import { BiHeart, BiUserCircle } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
 export const Header = () => {
+  const dispatch = useDispatch();
+  // const { totalPrice } = useSelector((state) => state);
+  function openOverlay() {
+    dispatch({ type: "OPEN_OVERLAY" });
+  }
+
   return (
     <div className="headerContainer">
       <Link to={"/"}>
@@ -18,11 +24,15 @@ export const Header = () => {
         </div>
       </Link>
       <div className="headerRight">
-        <div>
+        <div
+          onClick={() => {
+            openOverlay();
+          }}
+        >
           <span>
             <BsCart2 className="cart" />
           </span>
-          <span className="fullPrice">23342 руб</span>
+          <span className="fullPrice">{/*totalPrice*/} руб.</span>
         </div>
         <Link to={"/favorites"}>
           <BiHeart className="fullLike" />

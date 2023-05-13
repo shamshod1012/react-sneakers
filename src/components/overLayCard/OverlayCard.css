@@ -1,0 +1,123 @@
+.overlayCards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  height: 100%;
+}
+.closedOverlay {
+  display: none;
+}
+.overlayCardleft {
+  width: 70%;
+  min-height: 100vh;
+  background-color: black;
+  opacity: 0.4;
+}
+.overlayOrdersList {
+  width: 30%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.cartheader {
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.cartheader p {
+  font-size: 35px;
+  cursor: pointer;
+}
+.overlaySingleCard {
+  display: flex;
+  width: 95%;
+  height: 140px;
+  border: 1px solid rgb(185, 185, 185);
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.overlaySingleCard div img {
+  margin-left: 9px;
+  width: 100px;
+  height: 90px;
+}
+
+.overLayCardPrice {
+  font-weight: 800;
+}
+.overLayCardTitle {
+  font-weight: 500;
+}
+.OverlayDeleteIcon {
+  cursor: pointer;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid rgb(167, 167, 167);
+}
+.OverlayDeleteIcon p {
+  transform: rotate(45deg);
+}
+.emptyFavoritesOverlay {
+  display: flex;
+  margin-top: 30%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+}
+.btnReturn {
+  margin-top: 10px;
+  width: 70%;
+  height: 50px;
+  font-size: 25px;
+  border: none;
+  background-color: #9dd458;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cartfooter {
+  margin-top: 30px;
+  width: 90%;
+  height: 200px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.umumiyNarxContainer {
+  justify-content: space-between;
+  font-size: 25px;
+  display: flex;
+}
+.soliqContainer {
+  justify-content: space-between;
+  font-size: 25px;
+  display: flex;
+}
+.umumiyNarx {
+  font-weight: 600;
+  margin: 10px 0;
+}
+.cartfooter button {
+  margin-left: 15%;
+  margin-top: 10px;
+  width: 70%;
+  height: 50px;
+  font-size: 25px;
+  border: none;
+  background-color: #9dd458;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
