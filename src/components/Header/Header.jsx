@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { useDispatch } from "react-redux";
 import { BsCart2 } from "react-icons/bs";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { BiHeart, BiUserCircle } from "react-icons/bi";
 export const Header = () => {
   const dispatch = useDispatch();

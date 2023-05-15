@@ -34,8 +34,11 @@ export const OverlayCard = () => {
       const q2 = Number(q22);
       return q1 + q2;
     });
-    dispatch({ type: "GETTOTALPRICE", payload: TotalPrice });
+    // dispatch({ type: "GETTOTALPRICE", payload: TotalPrice });
     return TotalPrice;
+  }
+  if (data.length) {
+    getTotal();
   }
 
   return (

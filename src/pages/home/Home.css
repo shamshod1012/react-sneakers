@@ -1,10 +1,12 @@
 .Home {
   display: flex;
   min-height: 100vh;
+  /* height: 100%; */
   align-items: center;
   background-color: #e7f6ff;
   position: relative;
 }
 .hiddenHome {
+  
   overflow: hidden;
 }

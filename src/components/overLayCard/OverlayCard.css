@@ -99,14 +99,17 @@
   justify-content: space-between;
   font-size: 25px;
   display: flex;
+  align-items: center;
 }
 .soliqContainer {
   justify-content: space-between;
   font-size: 25px;
   display: flex;
+  align-items: center;
 }
 .umumiyNarx {
   font-weight: 600;
+
   margin: 10px 0;
 }
 .cartfooter button {
@@ -114,10 +117,14 @@
   margin-top: 10px;
   width: 70%;
   height: 50px;
-  font-size: 25px;
+  font-size: 18px;
   border: none;
   background-color: #9dd458;
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
+}
+.cartmain {
+  height: 300px;
+  overflow: auto;
 }
