@@ -14,7 +14,7 @@ import { ErrorPage } from "./pages/error page";
 import { Orders } from "./pages/orders";
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "*",
     element: <Home />,
   },
   {
@@ -25,10 +25,10 @@ const router = createBrowserRouter([
     path: "/orders",
     element: <Orders />,
   },
-  {
-    path: "*",
-    element: <ErrorPage />,
-  },
+  // {
+  //   path: "*",
+  //   element: <ErrorPage />,
+  // },
 ]);
 function App() {
   const state = useSelector((state) => state);
@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     dispatch(
-      fetchItems("http://localhost:8000/allSneakers", "SAVE_ALL_SNEAKERS")
+      fetchItems("http://localhost:8000/allSneakers", "SAVE_SHOWING_SNEAKERS")
     );
   }, []);
 

@@ -8,19 +8,6 @@ export const fetchItems = (url, actionName) => async (dispatch) => {
   }
 };
 
-export const remoteItems = (url, id) => async () => {
-  try {
-    const res = await fetch(`${url}/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-type": "Application/Json",
-      },
-    });
-  } catch (error) {
-    console.error("XATOLIK", error);
-  }
-};
-
 export const changeFavorites = (url, item) => async () => {
   const res = await fetch(`${url}/${item.id}`, {
     method: "put",

@@ -1,11 +1,11 @@
 {
   "allSneakers": [
     {
-      "title": "Кроссовки Puma X Aka",
+      "title": "Кроссовки Puma X Aka Boku Armour",
       "id": 1,
-      "price": 32000,
+      "price": 11867,
       "image": "/assets/images/s1.svg",
-      "isFavorite": true,
+      "isFavorite": false,
       "isOrdered": false
     },
     {
@@ -21,8 +21,8 @@
       "title": "Мужские Кроссовки Nike Blazer Mid Suede",
       "price": "8499",
       "image": "/assets/images/s3.svg",
-      "isFavorite": true,
-      "isOrdered": true
+      "isFavorite": false,
+      "isOrdered": false
     },
     {
       "id": 4,
@@ -77,6 +77,70 @@
       "title": "Мужские Кроссовки Nike Kyrie Flytrap IV",
       "price": "11999",
       "image": "/assets/images/s10.svg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 11,
+      "title": "Мужские Кроссовки Adidas Classic White ",
+      "price": "9870",
+      "image": "https://live.staticflickr.com/65535/50395873783_8c36f8de3f_b.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 12,
+      "title": "Мужские Кроссовки Adidas Gray Oligarh",
+      "price": "12219",
+      "image": " https://i.pinimg.com/originals/1e/55/bd/1e55bdc1278d253fd677a8e2b5aa169c.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 13,
+      "title": "Мужские Кроссовки Puma X Basic White",
+      "price": "6590",
+      "image": "https://www.shutterstock.com/image-photo/pair-stylish-sneakers-isolated-on-260nw-1752254936.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 14,
+      "title": "Мужские Кроссовки Jordan Air Red",
+      "price": "18970",
+      "image": "https://previews.123rf.com/images/slaystorm/slaystorm1905/slaystorm190500059/124902700-a-pair-of-red-color-canvas-shoes-isolated-on-white-background-with-clipping-path.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 15,
+      "title": "Кроссовки Nike Violet And Gray XIV",
+      "price": "23980",
+      "image": "https://thumbs.dreamstime.com/b/pair-unbranded-purple-color-sport-running-shoes-white-background-unbranded-purple-running-shoes-white-background-143002164.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 16,
+      "title": "Кроссовки Nike Long Black Edition",
+      "price": "12190",
+      "image": "https://previews.123rf.com/images/aperturesound/aperturesound1405/aperturesound140500004/27959148-black-high-top-sneakers-on-a-white-background.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 17,
+      "title": "Кроссовки Nike Short Black Edition",
+      "price": "13290",
+      "image": "https://st2.depositphotos.com/4307429/7393/i/950/depositphotos_73934615-stock-photo-sneaker-on-white-background.jpg",
+      "isFavorite": false,
+      "isOrdered": false
+    },
+    {
+      "id": 18,
+      "title": "Кроссовки Nike Short Red Edition",
+      "price": "11209",
+      "image": "https://i.stack.imgur.com/WMAkv.jpg",
       "isFavorite": false,
       "isOrdered": false
     }

@@ -3,7 +3,7 @@ import { Card } from "../Card/Card";
 
 import "./Cards.css";
 
-export const Cards = ({ items, title }) => {
+export const Cards = ({ items, title, currentPage }) => {
   return (
     <div className="sneakersContainer">
       <div className="sneakersHeader">
@@ -14,7 +14,9 @@ export const Cards = ({ items, title }) => {
 
       <div className="sneakersMain">
         {items.map((sneakers) => {
-          return <Card key={sneakers.id} item={sneakers} />;
+          return (
+            <Card key={sneakers.id} currentPage={currentPage} item={sneakers} />
+          );
         })}
       </div>
     </div>

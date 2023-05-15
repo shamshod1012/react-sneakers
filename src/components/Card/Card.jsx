@@ -12,20 +12,22 @@ import {
 } from "../../redux/thunk";
 import { changeOrder, changeOrder2 } from "../../redux/thunk";
 
-export const Card = ({ item, changeFavoritesTest }) => {
-
-  
-
+export const Card = ({ item, currentPage }) => {
   const { id, title, image, price, isFavorite, isOrdered } = item;
 
   const [isLiked, setIsLiked] = useState(isFavorite);
   const [isOrder, setIsOrder] = useState(isOrdered);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(
-      fetchItems("http://localhost:8000/allSneakers", "SAVE_ALL_SNEAKERS")
-    );
-  }, [isLiked, isOrder]);
+  // console.log(currentPage);
+  // useEffect(() => {
+  //   dispatch(
+  //     fetchItems(
+  //       `http://localhost:8000/allSneakers?_page=${currentPage}&_limit=8`,
+  //       "SAVE_ALL_SNEAKERS"
+  //     )
+  //   );
+  // }, [isLiked, isOrder]);
+
   function handleFavoriteClick() {
     if (isLiked) {
       dispatch(changeFavorites2("http://localhost:8000/allSneakers", item));

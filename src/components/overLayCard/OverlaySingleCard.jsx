@@ -10,11 +10,11 @@ export const OverlaySingleCard = (item) => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(
-      fetchItems("http://localhost:8000/allSneakers", "SAVE_ALL_SNEAKERS")
-    );
-  }, [bool]);
+  // useEffect(() => {
+  //   dispatch(
+  //     fetchItems("http://localhost:8000/allSneakers", "SAVE_ALL_SNEAKERS")
+  //   );
+  // }, [bool]);
 
   const { image, id, title, price } = item;
   return (
