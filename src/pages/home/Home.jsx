@@ -47,4 +47,3 @@ export const Home = () => {
     </div>
   );
 };
-/*http://localhost:8000/allSneakers?_page=1&_limit=8 */

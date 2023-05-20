@@ -32,7 +32,7 @@ export const Header = () => {
           <span>
             <BsCart2 className="cart" />
           </span>
-          <span className="fullPrice">{/*totalPrice*/} руб.</span>
+          <span className="fullPrice">8400 руб.</span>
         </div>
         <Link to={"/favorites"}>
           <BiHeart className="fullLike" />
