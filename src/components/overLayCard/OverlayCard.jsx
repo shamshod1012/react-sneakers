@@ -11,7 +11,9 @@ export const OverlayCard = () => {
   const dispatch = useDispatch();
 
   const [data, setData] = useState([]);
+  
   const [totalValue, setTotalValue] = useState("");
+
   const { allSneakers, isOverlayHide } = useSelector((state) => state);
   useEffect(() => {
     const orders = allSneakers.filter((element) => {
@@ -42,9 +44,12 @@ export const OverlayCard = () => {
   }
 
   return (
-    <div className={isOverlayHide ? "closedOverlay" : "overlayCards"}>
-      <div className="overlayCardleft" onClick={closeOverlay}></div>
-      <div className="overlayOrdersList">
+    <>
+      <div
+        className={isOverlayHide ? "closedOverlay" : "overlayCart"}
+        onClick={closeOverlay}
+      ></div>
+      <div className={isOverlayHide ? "closedCartList" : "overlayOrdersList"}>
         <div className="cartheader">
           <p>Savat</p>
           <p onClick={closeOverlay}>
@@ -87,6 +92,6 @@ export const OverlayCard = () => {
           ""
         )}
       </div>
-    </div>
+    </>
   );
 };

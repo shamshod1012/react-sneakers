@@ -14,7 +14,7 @@
       "price": "12999",
       "image": "/assets/images/s2.svg",
       "isFavorite": true,
-      "isOrdered": false
+      "isOrdered": true
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "price": "8499",
       "image": "/assets/images/s3.svg",
       "isFavorite": false,
-      "isOrdered": false
+      "isOrdered": true
     },
     {
       "id": 4,
@@ -46,7 +46,7 @@
       "price": "19999",
       "image": "/assets/images/s6.svg",
       "isFavorite": false,
-      "isOrdered": false
+      "isOrdered": true
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "price": "9999",
       "image": "/assets/images/s7.svg",
       "isFavorite": false,
-      "isOrdered": false
+      "isOrdered": true
     },
     {
       "id": 8,
